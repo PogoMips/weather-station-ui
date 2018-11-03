@@ -1,0 +1,36 @@
+:host {
+    flex-grow: 1;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.temp {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+
+    .integer {
+        font-size: 150px;
+    }
+
+    .decimal {
+        font-size: 60px;
+    }
+}
+
+.recent {
+    display: flex;
+
+    .high {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .period {
+        font-size: 10px;
+    }
+
+    .high-value {
+        font-size: 35px;
+    }
+}

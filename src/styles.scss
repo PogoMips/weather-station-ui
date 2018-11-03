@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@include mat-core();
+
+$primary: mat-palette($mat-deep-purple);
+$accent:  mat-palette($mat-amber, A200, A100, A400);
+
+$theme: mat-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);
+
+$dark-primary: mat-palette($mat-pink, 700, 500, 900);
+$dark-accent:  mat-palette($mat-blue-grey, A200, A100, A400);
+$dark-warn:    mat-palette($mat-deep-orange);
+
+$dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+@include angular-material-theme($dark-theme);
+
+html {
+    background-color: rgb(44, 44, 44);
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+h1, h2, h3 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}

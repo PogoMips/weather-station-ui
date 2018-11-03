@@ -1,0 +1,29 @@
+<mat-card>
+    <div class="container">
+        <div class="header">
+            <h3 *ngIf="indoor">Innentemperatur</h3>
+            <h3 *ngIf="!indoor">Außentemperatur</h3>
+        </div>
+        <div class="temp">
+            <div class="integer">
+                {{ integerPart }}
+            </div>
+            <div class="decimal">
+                .{{ decimalPart }}
+            </div>
+        </div>
+        <div class="recent">
+            <div>
+                <div class="high">
+                    High
+                </div>
+                <div class="period">
+                    Last 7 Days
+                </div>
+            </div>
+            <div class="high-value">
+                {{ high }}
+            </div>
+        </div>
+    </div>
+</mat-card>
