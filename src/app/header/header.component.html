@@ -1,0 +1,13 @@
+<mat-card class="layout">
+    <div class="date">
+        <div class="day">
+            <h2>{{ getDay() }}</h2>
+        </div>
+        <div>
+            {{ getDate() | date: 'dd.MM.yyyy' }}
+        </div>
+    </div>
+    <div class="time">
+        <h1>{{ time | date: 'HH:mm' }}</h1>
+    </div>
+</mat-card>

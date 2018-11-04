@@ -1,0 +1,55 @@
+:host {
+    flex-grow: 1;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.temp {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+
+    .integer {
+        font-size: 150px;
+    }
+
+    .decimal {
+        font-size: 60px;
+    }
+}
+
+.recent {
+    display: flex;
+    justify-content: space-between;
+
+    .elements {
+        display: flex;
+
+        .arrow {
+            margin-right: -5px;
+            margin-left: -15px;
+            font-size: 40px;
+
+            &.up {
+                transform: rotate(-90deg);
+            }
+
+            &.down {
+                transform: rotate(90deg);
+            }
+        }
+
+        .high {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .period {
+            font-size: 10px;
+        }
+
+        .high-value {
+            font-size: 35px;
+        }
+    }
+}
