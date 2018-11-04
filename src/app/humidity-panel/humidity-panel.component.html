@@ -1,0 +1,44 @@
+<mat-card [ngClass]="{'warn': indoor && humidity > 65 && humidity <= 70, 'error': indoor && humidity > 70}">
+    <div class="container">
+        <div class="header">
+            <h3 *ngIf="indoor">Feuchtigkeit Innen</h3>
+            <h3 *ngIf="!indoor">Feuchtigkeit Außen</h3>
+        </div>
+        <div class="temp">
+            {{ humidity | number: '1.0-0'}}
+            <div class="unit">
+                %
+            </div>
+        </div>
+        <div class="recent">
+            <div class="elements">
+                <i class="material-icons arrow up">arrow_right_alt</i>
+                <div>
+                    <div class="high">
+                        High
+                    </div>
+                    <div class="period">
+                        Last 7 Days
+                    </div>
+                </div>
+                <div class="high-value">
+                    {{ high }}
+                </div>
+            </div>
+            <div class="elements">
+                <i class="material-icons arrow down">arrow_right_alt</i>
+                <div>
+                    <div class="high">
+                        Low
+                    </div>
+                    <div class="period">
+                        Last 7 Days
+                    </div>
+                </div>
+                <div class="high-value">
+                    {{ low }}
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-card>

@@ -15,7 +15,7 @@ export class ClimatePanelComponent implements OnInit {
         this.decimalPart = (value - this.integerPart).toFixed(1).substring(2);
     }
     public integerPart = 0;
-    public decimalPart = 0;
+    public decimalPart = '';
 
     @Input()
     public high = 0;

@@ -30,3 +30,17 @@ h1, h2, h3 {
     margin-block-start: 0;
     margin-block-end: 0;
 }
+
+app-humidity-panel {
+    .mat-card {
+        background-color: #021d49;
+
+        &.warn {
+            background-color: #ff8300;
+        }
+
+        &.error {
+            background-color: #ad0800;
+        }
+    }
+}

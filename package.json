@@ -3,11 +3,12 @@
     "version": "0.0.1",
     "scripts": {
         "ng": "ng",
-        "start": "ng serve",
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
-        "e2e": "ng e2e"
+        "e2e": "ng e2e",
+        "start": "ng serve --aot",
+        "start-network": "npm run start -- --host 0.0.0.0"
     },
     "private": true,
     "dependencies": {

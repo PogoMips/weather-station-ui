@@ -7,10 +7,12 @@ import { HeaderComponent } from './header/header.component';
 import { MatCardModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClimatePanelComponent } from './climate-panel/climate-panel.component';
+import { HumidityPanelComponent } from './humidity-panel/humidity-panel.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-    declarations: [AppComponent, HeaderComponent, ClimatePanelComponent],
-    imports: [BrowserModule, AppRoutingModule, MatCardModule, BrowserAnimationsModule],
+    declarations: [AppComponent, HeaderComponent, ClimatePanelComponent, HumidityPanelComponent],
+    imports: [BrowserModule, AppRoutingModule, MatCardModule, BrowserAnimationsModule, HttpClientModule],
     providers: [],
     bootstrap: [AppComponent]
 })

@@ -1,8 +1,19 @@
 <div class="container">
     <app-header></app-header>
-    <div class="panels">
-        <app-climate-panel [indoor]="false" [temp]="12.3" [high]="18.9"></app-climate-panel>
-        <app-climate-panel></app-climate-panel>
-        <app-climate-panel [indoor]="true" [temp]="20.7"></app-climate-panel>
+    <div class="temp-panels" *ngIf="!!sensorData">
+        <app-climate-panel class="panel" [indoor]="false" [temp]="0" [high]="0"></app-climate-panel>
+        <app-climate-panel class="panel"></app-climate-panel>
+        <app-climate-panel class="panel"
+                           [indoor]="true"
+                           [temp]="sensorData.temperature"
+                           [low]="sensorData.temperatureLow"
+                           [high]="sensorData.temperatureHigh"></app-climate-panel>
+    </div>
+    <div class="humidity-panels" *ngIf="!!sensorData">
+        <app-humidity-panel class="panel" [indoor]="false" [humidity]="0" [high]="0" [low]="0"></app-humidity-panel>
+        <app-humidity-panel class="panel" [indoor]="true"
+                            [humidity]="sensorData.humidity"
+                            [high]="sensorData.humidityHigh"
+                            [low]="sensorData.humidityLow"></app-humidity-panel>
     </div>
 </div>

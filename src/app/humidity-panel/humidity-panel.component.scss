@@ -8,13 +8,10 @@
     display: flex;
     align-items: baseline;
     justify-content: flex-end;
+    font-size: 100px;
 
-    .integer {
-        font-size: 130px;
-    }
-
-    .decimal {
-        font-size: 50px;
+    .unit {
+        font-size: 40px;
     }
 }
 
@@ -28,7 +25,7 @@
         .arrow {
             margin-right: -5px;
             margin-left: -15px;
-            font-size: 30px;
+            font-size: 40px;
 
             &.up {
                 transform: rotate(-90deg);
@@ -40,16 +37,16 @@
         }
 
         .high {
-            font-size: 15px;
+            font-size: 20px;
             font-weight: bold;
         }
 
         .period {
-            font-size: 8px;
+            font-size: 10px;
         }
 
         .high-value {
-            font-size: 28px;
+            font-size: 35px;
             margin-left: 5px;
         }
     }

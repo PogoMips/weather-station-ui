@@ -2,17 +2,17 @@
     display: flex;
     flex-direction: column;
 
-    .panels {
+    .temp-panels, .humidity-panels {
         margin: 0 10px 10px 10px;
         flex-grow: 2;
         display: flex;
         justify-content: space-between;
 
-        app-climate-panel:first-child {
+        .panel:first-child {
             margin-right: 10px;
         }
 
-        app-climate-panel:last-child {
+        .panel:last-child {
             margin-left: 10px;
         }
     }
