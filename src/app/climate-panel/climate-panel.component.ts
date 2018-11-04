@@ -20,6 +20,9 @@ export class ClimatePanelComponent implements OnInit {
     @Input()
     public high = 0;
 
+    @Input()
+    public low = 0;
+
     constructor() {}
 
     ngOnInit() {}
