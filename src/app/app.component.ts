@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
     constructor(private backendService: BackendService) {}
 
     ngOnInit() {
-        timer(0, 1000).subscribe(() => {
+        timer(0, 5000).subscribe(() => {
             this.backendService.getCurrent().subscribe((current: IDashboardData) => {
                 this.sensorData = current;
             });
