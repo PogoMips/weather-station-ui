@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BackendService, IDashboardData } from './backend.service';
 import { timer } from 'rxjs';
+import { IWeather } from './weather.model';
 
 @Component({
     selector: 'app-root',
@@ -9,6 +10,7 @@ import { timer } from 'rxjs';
 })
 export class AppComponent implements OnInit {
     public sensorData: IDashboardData;
+    public weatherData: IWeather;
 
     constructor(private backendService: BackendService) {}
 
@@ -16,6 +18,11 @@ export class AppComponent implements OnInit {
         timer(0, 5000).subscribe(() => {
             this.backendService.getCurrent().subscribe((current: IDashboardData) => {
                 this.sensorData = current;
+            });
+        });
+        timer(0, 60000).subscribe(() => {
+            this.backendService.getWeather().subscribe((current: IWeather) => {
+                this.weatherData = current;
             });
         });
     }
